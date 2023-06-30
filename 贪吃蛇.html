@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>贪吃蛇</title>
+      <style>
+        body {
+            background-image: url('background.jpg'); /* 改为你的图片路径 */
+            background-size: cover; /* 背景图片填满整个容器 */
+            background-repeat: no-repeat; /* 不重复 */
+            background-position: center; /* 从中心开始展示 */
+        }
+
+     #game-container {
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #game-board {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+        }
+        .dot {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('snake-body.png');
+        }
+        .food {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('food.png');
+        }
+        .head {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('snake-head.png');
+        }
+</style>
+
+</head>
+<body>
+
+
+    <div id="game-container">
+        <div id="game-board"></div>
+        <button id="start-button">开始</button>
+    </div>
+
+
+    <script src="snake.js"></script>
+</body>
+</html>
